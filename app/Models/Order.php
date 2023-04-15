@@ -15,4 +15,9 @@ class Order extends Model
     {
         return $this->paid == 1 ? 'Pago' : 'Em aberto';
     }
+
+    public function setTrackCodeAttribute($value)
+    {
+        $this->attributes['track_code'] = "#COD_{$value}{BR}";
+    }
 }
