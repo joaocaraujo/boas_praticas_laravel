@@ -23,8 +23,8 @@
                 @foreach($orders as $order)
                     <tr>
                         <td>{{ $order->id }}</td>
-                        <td>{{ $order->status == 'delivered' ? 'Enviado' : 'Envio pendente'}}</td>
-                        <td>{{ $order->paid == 1 ? 'Pago' : 'Em aberto'}}</td>
+                        <td>{{ $order->formatted_status}}</td>
+                        <td>{{ $order->formatted_paid }}</td>
                         <td>{{ $order->track_code }}</td>
                     </tr>
                 @endforeach
