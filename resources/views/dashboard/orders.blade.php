@@ -6,7 +6,6 @@
         <a href="{{ route('orders.index', ['status' => 'pending']) }}" class="btn btn-warning">Pendentes</a>
         <a href="{{ route('orders.index', ['status' => 'delivered'])  }}" class="btn btn-primary">Enviados</a>
         <a href="{{ route('orders.index', ['paid' => 1])  }}" class="btn btn-success">Pagos</a>
-        <a href="{{ route('orders.index', ['paid' => 0])  }}" class="btn btn-danger">Não pagos</a>
         <a href="{{ route('orders.index') }}" class="btn btn-light">Limpar Filtro</a>
         <hr>
 
