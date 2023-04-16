@@ -9,6 +9,9 @@
         <a href="{{ route('orders.index') }}" class="btn btn-light">Limpar Filtro</a>
         <hr>
 
+        <a href="{{ route('orders.create') }}" class="btn btn-dark">Criar pedido</a>
+        <hr>
+
         <table class="table table-border">
             <thead>
             <tr>
