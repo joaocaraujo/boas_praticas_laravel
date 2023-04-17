@@ -2,6 +2,7 @@
 
 namespace App\Observers;
 
+use App\Jobs\SendCreatedUserEmail;
 use App\User;
 use Illuminate\Support\Facades\Mail;
 
@@ -15,11 +16,7 @@ class UserObserver
      */
     public function created(User $user)
     {
-        Mail::send([], [], function ($message) {
-            $message->to('admin@site.com', 'Administrador')
-                ->subject("Cadastro de Usuario")
-                ->setBody("Um novo usuario foi cadastro com sucesso no sistema.");
-        });
+        SendCreatedUserEmail::dispatch($user);
     }
 
     /**
